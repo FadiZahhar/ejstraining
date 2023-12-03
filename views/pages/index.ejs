@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("../partials/head"); %>
+</head>
+
+<body>
+  <header>
+    <%- include("../partials/header"); %>
+  </header>
+
+  <main>
+    <div class="jumbotron py-1">
+      <h1>Mammoth Interactive</h1>
+      <p>Learn programming.</p>
+
+      <p>
+        <%= limitedDescription %>
+      </p>
+
+      <h2>Courses</h2>
+      <ul>
+        <% courses.forEach(function(course) { %>
+          <li>
+            <%= course.title %>
+          </li>
+        <% }); %>
+         
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <%- include("../partials/footer"); %>
+  </footer>
+</body>
+
+</html>
